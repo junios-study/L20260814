@@ -1,37 +1,36 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
-#define  ºÎ´ëÂî°³					1
-#define  Â¥Àå¸é						2
-#define  Â«»Í						3
-#define  ÇÑ¿ì_Áø¿µÀÌ°¡½î´Â			4
-
 int main()
 {
-	float Array[10] = { 0, };
+	int Map[10][10] = {
+		{1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+		{1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+		{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+	};
 
-	//¸ðµç ¹è¿­
-	//Array[0]		Array[1]						Array[9]
-	//Array + 0		Array + 1						Array + 9
-	//[]			[]							..  []
-	for (int i = 0; i < 10; ++i)
+	for (int Y = 0; Y < 10; ++Y)
 	{
-		Array[i] = i + 1;
-	}
-
-	//¸ù¶¥ ¹¹ÇØ.
-	//ranged for
-	for (auto Data : Array)
-	{
-		cout << Data << endl;
-	}
-	
-	int menu = 4;
-	if (menu == ÇÑ¿ì_Áø¿µÀÌ°¡½î´Â)
-	{
-		cout << "Á¡½É ÇÑ¿ì" << endl;
+		for (int X = 0; X < 10; ++X)
+		{
+			if (Map[Y][X] == 1)
+			{
+				cout << "*";
+			}
+			else if (Map[Y][X] == 0)
+			{
+				cout << " ";
+			}
+		}
+		cout << endl;
 	}
 
 

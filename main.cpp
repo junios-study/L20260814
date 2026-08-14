@@ -17,9 +17,17 @@ int main()
 	cout << *PA << endl;
 	*PA = 2;
 
+
 	cout << A << endl;
 
+	//int*형 변수의 위치를 기억하는 자료형
+	int** PPA = nullptr;  
 
+	PPA = &PA;
+	**PPA = 10;
+	cout << A << endl;
+
+	int*** PPA = &PPA;
 
 	return 0;
 }
